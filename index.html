@@ -5,25 +5,19 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-    <header class="page_header">
-      <div>
-        <a><img src="https://via.placeholder.com/108x18" width="108" height="18" alt="«Техномарт»"></a>
-        <form>
-          <!-- форма поиска -->
-        </form>
-        <p><a href="#">Закладки:</a>
-          <span>0</span></p>
-        <p><a href="#">Корзина:</a>
-          <span>0</span></p>
-        <a href="#">Оформить заказ</a>
-      </div>
-      <div>
-        <p><i>Интернет-магазин строительных материалов и инструментов для ремонта</i></p>
-        <p><a href="tel:+78125550555">+7 (812) 555-05-55</a><br>
-          <small>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</small></p>
-        <button type="button">Войти</button>
-        <a href="#">Регистрация</a>
-      </div>
+    <header class="header">
+      <a><img src="https://via.placeholder.com/108x18" width="108" height="18" alt="«Техномарт»"></a>
+      <form>
+        <!-- форма поиска -->
+      </form>
+      <a href="#">Закладки: 0</a>
+      <a href="#">Корзина: 0</a>
+      <a href="#">Оформить заказ</a>
+      <p><i>Интернет-магазин строительных материалов и инструментов для ремонта</i></p>
+      <p><a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <small>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</small></p>
+      <a href="#">Войти</a>
+      <a href="#">Регистрация</a>
       <nav>
         <ul>
           <li><a href="#">Главная</a></li>
@@ -44,7 +38,6 @@
           <li>
             <h3>Материалы</h3>
             <a href="#">На любой вкус</a>
-            <p class="new">new</p>
           </li>
           <li>
             <h3>Инструмент</h3>
@@ -69,9 +62,9 @@
             <p>Настоящие мужские игрушки</p>
             <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="">
           </div>
-          <button type="button">&#10094;</button>
-          <button type="button">&#10095;</button>
-          <div class="promo-slider__radio">
+          <a href="#">&#10094;</a>
+          <a href="#">&#10095;</a>
+          <div class="promo-slider__nav">
             <span class="radio"></span>
             <span class="radio"></span>
           </div>
@@ -98,7 +91,6 @@
               <div>
                 <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="">
               </div>
-              <p class="new">new</p>
             </a>
             <p><del>22500 Р.</del></p>
             <button type="button">15500 Р.</button>
@@ -119,7 +111,6 @@
               <div>
                 <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="">
               </div>
-              <p class="new">new</p>
             </a>
             <button type="button">12500 Р.</button>
           </li>
@@ -147,7 +138,7 @@
           <input type="radio" name="toggle" id="delivery" checked>
           <input type="radio" name="toggle" id="warranty">
           <input type="radio" name="toggle" id="credit">
-          <div class="service-slider__control">
+          <div class="service-slider__nav">
             <label for="delivery">Доставка</label>
             <label for="warranty">Гарантия</label>
             <label for="credit">Кредит</label>
@@ -210,9 +201,9 @@
         <p><a href="mailto: mail@htmlacademy.ru">Заблудились? Напишите нам!</a></p>
       </section>
     </main>
-    <footer class="page_footer">
+    <footer class="footer">
       <section>
-        <h2>Как нас найти</h2>
+        <h2 class="sr-only">Как нас найти</h2>
         <a><img src="https://via.placeholder.com/220x68" width="220" height="68" alt="Логотип интернет-магазина «Техномарт»"></a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
