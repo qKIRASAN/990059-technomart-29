@@ -3,8 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Cuprum"), local("Cuprum Regular"), local("Cuprum-Regular"),
-    url("../fonts/cuprum.woff2") format("woff2"),
+  src: url("../fonts/cuprum.woff2") format("woff2"),
     url("../fonts/cuprum.woff") format("woff");
 }
 
@@ -13,8 +12,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local("Cuprum Regular italic"), local("Cuprum-Regular italic"),
-    url("../fonts/cuprumitalic.woff2") format("woff2"),
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
     url("../fonts/cuprumitalic.woff") format("woff");
 }
 
@@ -23,8 +21,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Cuprum Bold"), local("Cuprum-Bold"),
-    url("../fonts/cuprumbold.woff2") format("woff2"),
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
     url("../fonts/cuprumbold.woff") format("woff");
 }
 
@@ -33,8 +30,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local("Cuprum Bold italic"), local("Cuprum-Bold italic"),
-    url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
     url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
@@ -43,9 +39,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("PT Sans"), local("PT Sans Regular"), local("PT Sans-Regular"),
-  url("../fonts/ptsans.woff2") format("woff2"),
-  url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -53,9 +48,8 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("PT Sans Bold"), local("PT Sans-Bold"),
-  url("../fonts/ptsansbold.woff2") format("woff2"),
-  url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 :root {
@@ -96,10 +90,6 @@
   --footer-white: #F3F7F9;
   --footer-pale: #FFD180;
   --footer-pale--50: rgba(255, 209, 128, 0.5);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
 }
 
 body {
