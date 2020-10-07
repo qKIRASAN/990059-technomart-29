@@ -743,16 +743,23 @@ img {
 .slider {
   width: 620px;
   height: 266px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: 1fr min-content;
   position: relative;
 }
 
-.slider > a:last-of-type {
+.slider > .btn {
   position: absolute;
   bottom: 27px;
+  left: 24px;
 }
 
 .slider__item {
   height: 100%;
+  padding: 0 24px;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
 
 .slider__item--perforator {
@@ -781,9 +788,47 @@ img {
 }
 
 .slider__link {
+  grid-row: 1/-1;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  width: 22px;
+  height: 40px;
+  margin: auto 24px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+}
+
+.slider__link--previous {
+  grid-column: 1/2;
+}
+
+.slider__link--next {
+  grid-column: 3/-1;
+  transform: rotate(180deg);
+}
+
+.slider__nav {
+  grid-column: 2/3;
+  grid-row: 2/-1;
+  justify-self: center;
+  height: 10px;
+  margin-bottom: 36px;
+}
+
+.slider__btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+}
+
+.slider__btn--current {
+  background-color: var(--basic-red);
 }
 
 .products:not(.catalog__products) {
