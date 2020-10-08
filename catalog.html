@@ -80,18 +80,35 @@
         <div class="catalog__inner-main">
           <section class="filter">
             <h2 class="filter__title">Фильтр</h2>
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <!-- форма фильтра товаров -->
+            <form class="filter__form" method="post" action="https://echo.htmlacademy.ru/">
+              <fieldset class="filter__item">
+                <legend>Цена:</legend>
+                <div class="range">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__progress-bar" style="width: 85%; margin-left: 0%;"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--min" tabindex="0" style="left: 9%"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0" style="left: 70%"></div>
+                  </div>
+                  <div class="range__price">
+                    <label class="min-price"><input type="number" name="min-price" value="0"></label>
+                    <label class="max-price"><input type="number" name="min-price" value="30000"></label>
+                  </div>
+                </div>
+              </fieldset>
             </form>
           </section>
           <section class="sort">
-            <h2 class="sort__title">Сортировка</h2>
-            <div class="sort__inner">
+            <h2 class="sort__title">Сортировка:</h2>
+            <div class="sort__text-btn">
               <a class="sort__btn sort__btn--active" href="#">По цене</a>
               <a class="sort__btn sort__btn--border" href="#">По типу</a>
               <a class="sort__btn sort__btn--border" href="#">По функционалу</a>
-              <a class="sort__btn sort__btn--active" href="#">&#9650;</a>
-              <a class="sort__btn" href="#">&#9660;</a>
+            </div>
+            <div class="sort__arrow-btn">
+              <a class="sort__btn sort__btn--active" href="#" aria-label="По возростанию">&#9650;</a>
+              <a class="sort__btn" href="#" aria-label="По убыванию">&#9660;</a>
             </div>
           </section>
           <section class="catalog__products">
