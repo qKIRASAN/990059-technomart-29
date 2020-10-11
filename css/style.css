@@ -306,10 +306,6 @@ img {
   cursor: pointer;
 }
 
-.search-form__btn:focus {
-  outline: none;
-}
-
 .header__btn-inner {
   display: flex;
   flex-wrap: wrap;
