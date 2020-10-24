@@ -561,8 +561,8 @@ img {
 
 .user__authorized .icon-user {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 49%;
+  transform: translateY(-51%);
   left: 14px;
   fill: var(--basic-greylight);
 }
@@ -571,7 +571,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 16px;
+  right: 17px;
   fill: var(--basic-greylight);
 }
 
@@ -1842,12 +1842,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 44px;
-  margin: 0 15px;
+  width: 47px;
+  margin: -1px 14px;
 }
 
 .sort__arrow-btn > .sort__btn{
   margin: 10px 0;
+  font-size: 15px;
 }
 
 .sort__btn {
