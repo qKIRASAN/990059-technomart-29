@@ -23,7 +23,7 @@
           </form>
           <div class="header__btn-inner">
             <a class="header__btn header__btn--bookmark" href="#">Закладки: 0</a>
-            <a class="header__btn header__btn--cart header__btn--add-cart" href="#">Корзина: 10</a>
+            <a class="header__btn header__btn--cart header__btn--add" href="#">Корзина: 10</a>
             <a class="header__btn header__btn--confirm" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -79,7 +79,7 @@
         </div>
         <div class="catalog__inner-main">
           <section class="filter">
-            <h2 class="filter__title">Фильтр</h2>
+            <h2 class="filter__title">Фильтр:</h2>
             <form class="filter__form" method="post" action="https://echo.htmlacademy.ru/">
               <fieldset class="filter__item">
                 <legend>Цена:</legend>
@@ -88,8 +88,8 @@
                     <div class="range__scale">
                       <div class="range__progress-bar" style="width: 85%; margin-left: 0;"></div>
                     </div>
-                    <div class="range__toggle range__toggle--min" tabindex="0" style="left: 9%"></div>
-                    <div class="range__toggle range__toggle--max" tabindex="0" style="left: 70%"></div>
+                    <div class="range__toggle range__toggle--min" tabindex="0" style="left: 8%"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0" style="left: 73%"></div>
                   </div>
                   <div class="range__price">
                     <label class="min-price"><input type="number" name="min-price" value="0"></label>
@@ -100,8 +100,8 @@
               <fieldset class="filter__item">
                 <legend>Производители:</legend>
                 <div class="suppliers">
-                  <input class="suppliers__input" type="checkbox" id="bosh" name="supplier" value="Bosh" checked>
-                  <label for="bosh">
+                  <input class="suppliers__input" type="checkbox" id="bosch" name="supplier" value="Bosch" checked>
+                  <label for="bosch">
                     <svg class="suppliers__checkbox suppliers__checkbox--off" width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"/>
                     </svg>
@@ -109,7 +109,7 @@
                       <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z"/>
                       <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"/>
                     </svg>
-                    <span class="suppliers__label-content">Bosh</span>
+                    <span class="suppliers__label-content">Bosch</span>
                   </label>
                 </div>
                 <div class="suppliers">
@@ -152,7 +152,7 @@
                   </label>
                 </div>
                 <div class="suppliers">
-                  <input class="suppliers__input" type="checkbox" id="hitachi" name="supplier" value="Hitachi">
+                  <input class="suppliers__input" type="checkbox" id="hitachi" name="supplier" value="Hitachi" disabled>
                   <label for="hitachi">
                     <svg class="suppliers__checkbox suppliers__checkbox--off" width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"/>
@@ -214,7 +214,7 @@
             <ul class="catalog__list">
               <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--144">
                   <img src="img/bfg6000.png" width="144" height="128" alt="">
                 </div>
                 <div class="product-price">
@@ -228,7 +228,7 @@
               </li>
               <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--144">
                   <img src="img/bfg6000.png" width="144" height="128" alt="">
                 </div>
                 <div class="product-price">
@@ -242,7 +242,7 @@
               </li>
               <li class="product-card product-card--new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--144">
                   <img src="img/bfg6000.png" width="144" height="128" alt="">
                 </div>
                 <div class="product-price">
@@ -256,7 +256,7 @@
               </li>
               <li class="product-card product-card--new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 3000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--127">
                   <img src="img/bfg3000.png" width="127" height="112" alt="">
                 </div>
                 <div class="product-price">
@@ -270,7 +270,7 @@
               </li>
               <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--144">
                   <img src="img/bfg6000.png" width="144" height="128" alt="">
                 </div>
                 <div class="product-price">
@@ -284,7 +284,7 @@
               </li>
               <li class="product-card product-card--new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--127">
                   <img src="img/bfg3000.png" width="127" height="112" alt="">
                 </div>
                 <div class="product-price">
@@ -297,7 +297,7 @@
               </li>
               <li class="product-card product-card--new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 3000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--127">
                   <img src="img/bfg3000.png" width="127" height="112" alt="">
                 </div>
                 <div class="product-price">
@@ -311,7 +311,7 @@
               </li>
               <li class="product-card" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--144">
                   <img src="img/bfg6000.png" width="144" height="128" alt="">
                 </div>
                 <div class="product-price">
@@ -325,7 +325,7 @@
               </li>
               <li class="product-card product-card--new" tabindex="0">
                 <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
-                <div class="product-card__img-inner">
+                <div class="product-card__img-inner product-card__img-inner--127">
                   <img src="img/bfg3000.png" width="127" height="112" alt="">
                 </div>
                 <div class="product-price">
@@ -341,7 +341,7 @@
               <a class="pagination__link pagination__link--current">1</a>
               <a class="pagination__link" href="#">2</a>
               <a class="pagination__link" href="#">3</a>
-              <a class="pagination__link" href="#">Следующая</a>
+              <a class="pagination__link pagination__link--next" href="#">Следующая</a>
             </div>
           </section>
         </div>
@@ -349,7 +349,7 @@
       <article class="notes">
         <div class="container">
           <h2 class="notes__title">Пара слов о перфораторах</h2>
-          <p class="notes__content">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+          <p class="notes__content">Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В&nbsp;ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </article>
     </main>
@@ -362,7 +362,7 @@
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </p>
         </section>
-        <div>
+        <div class="footer__nav-inner">
           <ul class="nav footer__nav">
             <li><a class="nav__link" href="#">Компания</a></li>
             <li><a class="nav__link" href="#">Новости</a></li>
@@ -410,5 +410,6 @@
       </div>
       <button class="modal__close" type="button" aria-label="Закрыть"></button>
     </section>
+    <script></script>
   </body>
 </html>
