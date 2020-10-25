@@ -253,23 +253,14 @@ img {
 }
 
 .search-form {
-  flex-grow: 1;
-}
-
-.search-form__label {
-  display: flex;
   position: relative;
-  min-height: 42px;
-}
-
-.search-form__label:focus {
-  outline: none;
+  flex-grow: 1;
 }
 
 .search-form__input {
   font: inherit;
   width: 100%;
-  height: inherit;
+  min-height: 42px;
   margin: 0;
   padding: 0 0 0 42px;
   border: none;
@@ -282,7 +273,7 @@ img {
   opacity: 1;
 }
 
-.search-form__input:hover + .search-form__btn > .icon-search {
+.search-form__input:hover + .search-form__btn .icon-search {
   fill: var(--basic-white);
 }
 
@@ -295,7 +286,7 @@ img {
   color: var(--basic-black);
 }
 
-.search-form__input:focus + .search-form__btn > .icon-search {
+.search-form__input:focus + .search-form__btn .icon-search {
   fill: var(--basic-red);
 }
 
@@ -307,12 +298,14 @@ img {
   color: var(--basic-white--50);
 }
 
-.search-form__input:active + .search-form__btn > .icon-search {
+.search-form__input:active + .search-form__btn .icon-search {
   fill: var(--basic-white--50);
 }
 
 .search-form__btn {
   position: absolute;
+  top: 0;
+  left: 0;
   font: inherit;
   margin: 0;
   border: none;
@@ -1317,16 +1310,23 @@ img {
 }
 
 .tab-content--guarantee > p {
+  position: relative;
   line-height: 24px;
+  padding-bottom: 14px;
+  z-index: 1;
 }
 
 .tab-content--credit > p {
+  position: relative;
   padding-bottom: 25px;
+  z-index: 1;
 }
 
 .tab-content--credit > .btn {
+  position: relative;
   padding: 11px 49px 9px;
   border-radius: 3px;
+  z-index: 1;
 }
 
 .main-inner {
@@ -1927,7 +1927,7 @@ img {
   padding-bottom: 65px;
 }
 
-.notes__title{
+.notes__title {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1937,7 +1937,7 @@ img {
   padding-bottom: 20px;
 }
 
-.notes__content{
+.notes__content {
   font-family: "PT Sans", "Helvetica", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -2082,7 +2082,6 @@ img {
 
 .develop {
   grid-column: 11/13;
-  /*text-align: end;*/
   margin: 0;
   padding-left: 46px;
   line-height: 19px;
@@ -2306,6 +2305,11 @@ img {
 .modal-add-cart__continue-btn {
   border: none;
   margin: 37px 0;
+  padding: 11px 32px 9px;
+}
+
+.modal-add-cart__order-btn {
+  padding: 11px 47px 9px;
 }
 
 .modal-add-cart__continue-btn {
