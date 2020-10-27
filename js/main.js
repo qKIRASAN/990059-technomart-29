@@ -7,8 +7,8 @@ if (document.querySelector(".modal-write-us")) {
   const writeUsCloseButton = writeUs.querySelector(".modal__close");
   const writeUsButton = document.querySelector(".contacts__btn");
   let isStorageSupport = true;
-  let userNameStorage = localStorage.setItem("userName", userName.value);
-  let userEmailStorage = localStorage.setItem("userEmail", userEmail.value);
+  let userNameStorage = "";
+  let userEmailStorage = "";
 
   try {
     userNameStorage = localStorage.getItem("userName");
@@ -17,7 +17,7 @@ if (document.querySelector(".modal-write-us")) {
     isStorageSupport = false;
   }
 
-  writeUsButton.addEventListener("click", function (event) {
+  writeUsButton.addEventListener("click", (event) => {
     event.preventDefault();
     writeUs.classList.add("modal--show");
     if (userNameStorage) {
@@ -32,9 +32,11 @@ if (document.querySelector(".modal-write-us")) {
     }
   });
 
-  writeUsForm.addEventListener("submit", function (event) {
+  writeUsForm.addEventListener("submit", (event) => {
     if (!userName.value || !userEmail.value || !userMessage.value) {
       event.preventDefault();
+      writeUs.classList.remove("modal--error");
+      writeUs.offsetWidth;
       writeUs.classList.add("modal--error");
       if (!userName.value) {
         userName.focus();
@@ -53,13 +55,13 @@ if (document.querySelector(".modal-write-us")) {
     }
   });
 
-  writeUsCloseButton.addEventListener("click", function (event) {
+  writeUsCloseButton.addEventListener("click", (event) => {
     event.preventDefault();
     writeUs.classList.remove("modal--show");
     writeUs.classList.remove("modal--error");
   });
 
-  window.addEventListener("keydown", function (event) {
+  window.addEventListener("keydown", (event) => {
     if (event.keyCode === 27 || event.key === "escape") {
       if (writeUs.classList.contains("modal--show")) {
         event.preventDefault();
@@ -75,17 +77,17 @@ if (document.querySelector(".modal-map")) {
   const modalMapCloseButton = modalMap.querySelector(".modal__close");
   const modalMapButton = document.querySelector(".contacts__map");
 
-  modalMapButton.addEventListener("click", function (event) {
+  modalMapButton.addEventListener("click", (event) => {
     event.preventDefault();
     modalMap.classList.add("modal--show");
   });
 
-  modalMapCloseButton.addEventListener("click", function (event) {
+  modalMapCloseButton.addEventListener("click", (event) => {
     event.preventDefault();
     modalMap.classList.remove("modal--show");
   });
 
-  window.addEventListener("keydown", function (event) {
+  window.addEventListener("keydown", (event) => {
     if (event.keyCode === 27 || event.key === "escape") {
       if (modalMap.classList.contains("modal--show")) {
         event.preventDefault();
@@ -96,76 +98,31 @@ if (document.querySelector(".modal-map")) {
 }
 
 if (document.querySelector(".slider")) {
-  const sliderButtonNext = document.querySelector(".slider__link--next");
-  const sliderButtonPrevious = document.querySelector(".slider__link--previous");
-  const sliderButtons = document.querySelectorAll(".slider__btn");
-  const slides = document.querySelectorAll(".slider__item");
-  let slideCount = 0;
-  let sliderButtonCount = 1;
+  const slider = document.querySelector(".slider");
+  const sliderButtons = slider.querySelectorAll(".slider__btn");
+  const slidePerforator = slider.querySelector(".slider__item--perforator");
+  const slideDrill = slider.querySelector(".slider__item--drill");
 
-  sliderButtonNext.addEventListener("click", event => {
+  const toggleSlide = function () {
+    if (slidePerforator.classList.contains("slider__item--show")) {
+      slidePerforator.classList.remove("slider__item--show");
+      slideDrill.classList.add("slider__item--show");
+      sliderButtons[1].classList.remove("slider__btn--current");
+      sliderButtons[0].classList.add("slider__btn--current");
+    } else {
+      slideDrill.classList.remove("slider__item--show");
+      slidePerforator.classList.add("slider__item--show");
+      sliderButtons[0].classList.remove("slider__btn--current");
+      sliderButtons[1].classList.add("slider__btn--current");
+    }
+  };
+
+  slider.addEventListener("click", (event) => {
     event.preventDefault();
-    if (slides[slideCount].classList.contains("slider__item--show")) {
-      slides[slideCount].classList.remove("slider__item--show");
-    }
-    if (sliderButtons[sliderButtonCount].classList.contains("slider__btn--current")) {
-      sliderButtons[sliderButtonCount].classList.remove("slider__btn--current");
-    }
-    slideCount++;
-    if (slideCount >= slides.length) {
-      slideCount = 0;
-    }
-    sliderButtonCount++;
-    if (sliderButtonCount >= sliderButtons.length) {
-      sliderButtonCount = 0;
-    }
-    slides[slideCount].classList.add("slider__item--show");
-    sliderButtons[sliderButtonCount].classList.add("slider__btn--current");
+    let currentTarget = event.target;
+    if (!currentTarget.classList.contains("slider__link") && !currentTarget.classList.contains("slider__btn")) return;
+    toggleSlide();
   });
-
-  sliderButtonPrevious.addEventListener("click", event => {
-    event.preventDefault();
-    if (slides[slideCount].classList.contains("slider__item--show")) {
-      slides[slideCount].classList.remove("slider__item--show");
-    }
-    if (sliderButtons[sliderButtonCount].classList.contains("slider__btn--current")) {
-      sliderButtons[sliderButtonCount].classList.remove("slider__btn--current");
-    }
-    slideCount--;
-    sliderButtonCount--;
-    if (slideCount < 0) {
-      slideCount = slides.length - 1;
-    }
-    if (sliderButtonCount < 0) {
-      sliderButtonCount = sliderButtons.length - 1;
-    }
-    slides[slideCount].classList.add("slider__item--show");
-    sliderButtons[sliderButtonCount].classList.add("slider__btn--current");
-  });
-
-  const sliderNav = document.querySelector(".slider__nav");
-  let currentButton = sliderNav.querySelector(".slider__btn--current");
-
-  sliderNav.addEventListener("click", event => {
-    event.preventDefault();
-    let current = event.target;
-    if (!current.classList.contains("slider__btn")) return;
-    toggleSlide(current);
-  });
-
-  function toggleSlide(current) {
-    if (currentButton) {
-      currentButton.classList.remove("slider__btn--current");
-      slides[slideCount].classList.remove("slider__item--show");
-    }
-    currentButton = current;
-    currentButton.classList.add("slider__btn--current");
-    slideCount++;
-    if (slideCount >= slides.length) {
-      slideCount = 0;
-    }
-    slides[slideCount].classList.add("slider__item--show");
-  }
 }
 
 if (document.querySelector(".tab")) {
@@ -173,7 +130,7 @@ if (document.querySelector(".tab")) {
   const tabContent = document.querySelectorAll(".tab-content");
 
   tabButtons.forEach((tabButton, index) => {
-    tabButton.addEventListener("click", event => {
+    tabButton.addEventListener("click", (event) => {
       event.preventDefault();
       tabButton.classList.add("tab__btn--current");
       tabButton.removeAttribute("href");
@@ -200,8 +157,8 @@ if (document.querySelector(".modal-add-cart")) {
   const bookmark = document.querySelector(".header__btn--bookmark");
   let bookmarkCount = 0;
 
-  productCardBuyButtons.forEach(productCarBuyButton => {
-    productCarBuyButton.addEventListener("click", function (event) {
+  productCardBuyButtons.forEach((productCarBuyButton) => {
+    productCarBuyButton.addEventListener("click", (event) => {
       event.preventDefault();
       if (cart.classList.contains("header__btn--add")) {
         cart.classList.remove("header__btn--add");
@@ -216,13 +173,13 @@ if (document.querySelector(".modal-add-cart")) {
     });
   });
 
-  addCartCloseButton.addEventListener("click", function (event) {
+  addCartCloseButton.addEventListener("click", (event) => {
     event.preventDefault();
     addCart.classList.remove("modal--show");
   });
 
-  productCardFavoritesButtons.forEach(productCardFavoritesButton => {
-    productCardFavoritesButton.addEventListener("click", function(event) {
+  productCardFavoritesButtons.forEach((productCardFavoritesButton) => {
+    productCardFavoritesButton.addEventListener("click", (event) => {
       event.preventDefault();
       if (bookmark.classList.contains("header__btn--add")) {
         bookmark.classList.remove("header__btn--add");
@@ -235,7 +192,7 @@ if (document.querySelector(".modal-add-cart")) {
     });
   });
 
-  window.addEventListener("keydown", function (event) {
+  window.addEventListener("keydown", (event) => {
     if (event.keyCode === 27 || event.key === "escape") {
       if (addCart.classList.contains("modal--show")) {
         event.preventDefault();
