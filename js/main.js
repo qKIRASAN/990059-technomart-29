@@ -118,10 +118,14 @@ if (document.querySelector(".slider")) {
   };
 
   slider.addEventListener("click", (event) => {
-    event.preventDefault();
     let currentTarget = event.target;
-    if (!currentTarget.classList.contains("slider__link") && !currentTarget.classList.contains("slider__btn")) return;
-    toggleSlide();
+    if (currentTarget.classList.contains("btn")) {
+      event.defaultPrevented;
+    } else {
+      event.preventDefault();
+      if (!currentTarget.classList.contains("slider__link") && !currentTarget.classList.contains("slider__btn")) return;
+      toggleSlide();
+    }
   });
 }
 

@@ -4,7 +4,7 @@
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/cuprum.woff2") format("woff2"),
-    url("../fonts/cuprum.woff") format("woff");
+  url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/cuprumitalic.woff2") format("woff2"),
-    url("../fonts/cuprumitalic.woff") format("woff");
+  url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/cuprumbold.woff2") format("woff2"),
-    url("../fonts/cuprumbold.woff") format("woff");
+  url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
@@ -31,7 +31,7 @@
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("../fonts/cuprumbolditalic.woff") format("woff");
+  url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -40,7 +40,7 @@
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/ptsans.woff2") format("woff2"),
-    url("../fonts/ptsans.woff") format("woff");
+  url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -49,7 +49,7 @@
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/ptsansbold.woff2") format("woff2"),
-    url("../fonts/ptsansbold.woff") format("woff");
+  url("../fonts/ptsansbold.woff") format("woff");
 }
 
 @-webkit-keyframes fade-in-down {
@@ -168,8 +168,6 @@ a {
 
 img {
   max-width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 
 *, *::before, *::after {
@@ -806,51 +804,6 @@ img {
   margin-bottom: 59px;
 }
 
-.features > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.features > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.features > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-
-.features > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-
-.features > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-
-.features > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-}
-
-.features > *:nth-child(7) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-}
-
-.features > *:nth-child(8) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-}
-
-.features > *:nth-child(9) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 5;
-}
-
 .features__item {
   width: 300px;
   min-height: 123px;
@@ -987,36 +940,6 @@ img {
   grid-template-rows: 1fr -webkit-min-content;
   grid-template-rows: 1fr min-content;
   position: relative;
-}
-
-.slider > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.slider > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-}
-
-.slider > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.slider > *:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-
-.slider > *:nth-child(5) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-}
-
-.slider > *:nth-child(6) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
 }
 
 .slider > .btn {
@@ -1538,9 +1461,9 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-bluelight);
   -webkit-box-shadow: 0 1px 0 var(--basic-bluedark),
-    inset 0 1px 0 var(--blue-tone-shadow);
+  inset 0 1px 0 var(--blue-tone-shadow);
   box-shadow: 0 1px 0 var(--basic-bluedark),
-    inset 0 1px 0 var(--blue-tone-shadow);
+  inset 0 1px 0 var(--blue-tone-shadow);
 }
 
 .tab__btn:hover {
@@ -1797,26 +1720,6 @@ img {
   -moz-column-gap: 20px;
   column-gap: 20px;
   margin-bottom: 47px;
-}
-
-.catalog__inner-main > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-
-.catalog__inner-main > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-
-.catalog__inner-main > *:nth-child(3) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-}
-
-.catalog__inner-main > *:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
 }
 
 .catalog__products {
