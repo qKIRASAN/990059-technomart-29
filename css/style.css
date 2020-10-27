@@ -663,7 +663,7 @@ img {
 .features__item {
   width: 300px;
   min-height: 123px;
-  padding: 20px 23px 21px;
+  padding: 20px 119px 21px 23px;
   position: relative;
   overflow: hidden;
 }
@@ -759,7 +759,7 @@ img {
 
 .features__btn {
   background-color: var(--basic-white--30);
-  width: 135px;
+  min-width: 135px;
   padding: 10px;
 }
 
@@ -800,11 +800,11 @@ img {
 }
 
 .slider__item--perforator {
-  background: black url("../img/perforator.jpg") no-repeat;
+  background: var(--basic-black) url("../img/perforator.jpg") no-repeat;
 }
 
 .slider__item--drill {
-  background: black url("../img/drill.jpg") no-repeat;
+  background: var(--basic-black)  url("../img/drill.jpg") no-repeat;
 }
 
 .slider__item--show {
@@ -899,6 +899,7 @@ img {
   color: var(--basic-bluelight);
   margin: 0 auto 0 0;
   padding: 15px 14px;
+  max-width: 75%;
 }
 
 .products__list {
@@ -1022,6 +1023,7 @@ img {
   line-height: 18px;
   vertical-align: top;
   text-transform: uppercase;
+  text-align: center;
   border: none;
   border-radius: 2px;
 }
@@ -1040,7 +1042,8 @@ img {
   position: absolute;
   width: 15px;
   height: 15px;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 29px;
   opacity: 0.3;
   background-image: url("../img/icon-cart.svg");
@@ -1109,6 +1112,7 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-bluelight);
+  max-width: 75%;
 }
 
 .supplier__inner {
@@ -1653,12 +1657,13 @@ img {
   text-align: center;
   color: var(--basic-black);
   background-color: var(--basic-pearlwhite);
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .range__price input::-webkit-outer-spin-button,
 .range__price input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .suppliers {
